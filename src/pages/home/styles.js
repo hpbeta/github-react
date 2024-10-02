@@ -31,15 +31,14 @@ export const ContainerHeader = styled.div`
   margin-top: 20px;
   animation: flipTitle 2s;
 
-
-  @keyframes flipTitle  {
-    from{
-        transform: rotateX(90deg);
+  @keyframes flipTitle {
+    from {
+      transform: rotateX(90deg);
     }
     to {
-        transform: rotateX(0deg);
+      transform: rotateX(0deg);
     }
-}
+  }
 
   input {
     border: none;
@@ -48,10 +47,12 @@ export const ContainerHeader = styled.div`
     width: 85%;
   }
 
-  @media (max-width: 393px) {
-    width: 350px; 
+  @media (max-width: 375px) {
+    width: 350px;
   }
-
+  @media (max-width: 393px) {
+    width: 350px;
+  }
 `;
 
 export const IconSearch = styled.button`
@@ -82,17 +83,17 @@ export const ContainerMain = styled.main`
   color: #ffffff;
   animation: flipTitle 2s;
 
-  @keyframes flipTitle  {
-    from{
-        transform: rotateX(90deg);
+  @keyframes flipTitle {
+    from {
+      transform: rotateX(90deg);
     }
     to {
-        transform: rotateX(0deg);
+      transform: rotateX(0deg);
     }
-}
+  }
 
-@media (max-width: 393px) {
-    width: 350px; 
+  @media (max-width: 393px) {
+    width: 350px;
   }
 `;
 

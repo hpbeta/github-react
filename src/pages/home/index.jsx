@@ -36,8 +36,7 @@ export function Home () {
                  </ul>
                  <span>{user.location ? user.location : 'Sem localização'}</span>
                  {<StyledLink to={`/repositories/users/${user.login}/repos`}>Ver mais</StyledLink>}
-             </ContainerMain>
-
+            </ContainerMain>
             )}
         </Container>
     )

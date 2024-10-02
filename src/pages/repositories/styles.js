@@ -10,15 +10,15 @@ export const ContainerRepo = styled.div`
 
   h1 {
     animation: flipTitle 2s;
-  
-  @keyframes flipTitle  {
-    from{
+
+    @keyframes flipTitle {
+      from {
         transform: rotateX(90deg);
-    }
-    to {
+      }
+      to {
         transform: rotateX(0deg);
+      }
     }
-}
   }
 `;
 
@@ -31,17 +31,20 @@ export const ContainerList = styled.div`
   padding: 20px 15px;
   animation: flipList 2s;
 
-  @keyframes flipList  {
-    from{
-        transform: rotateY(90deg);
+  @keyframes flipList {
+    from {
+      transform: rotateY(90deg);
     }
     to {
-        transform: rotateY(0deg);
+      transform: rotateY(0deg);
     }
-}
+  }
 
-@media (max-width: 480px) {
-    width: 350px; 
+  @media (max-width: 375px) {
+    width: 350px;
+  }
+  @media (max-width: 393px) {
+    width: 350px;
   }
 `;
 
@@ -52,7 +55,6 @@ export const List = styled.ul`
   flex-wrap: wrap;
   gap: 10px;
   height: 100%;
-  
 `;
 
 export const ListItem = styled.li`
@@ -66,16 +68,15 @@ export const ListItem = styled.li`
   height: 40px;
   font-size: 12px;
   cursor: pointer;
- transition: 0.4s;
+  transition: 0.4s;
 
-  &:hover{
-   transform: scale(1.1);
-   
+  &:hover {
+    transform: scale(1.1);
   }
 `;
 
-export const  LinkBack = styled(Link)`
-margin-top: 20px;
+export const LinkBack = styled(Link)`
+  margin-top: 20px;
   border: none;
   cursor: pointer;
   background-color: #6775a8;
@@ -88,4 +89,4 @@ margin-top: 20px;
   &:hover {
     background-color: #91a1ff;
   }
-`
+`;

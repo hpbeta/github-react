@@ -12,7 +12,6 @@ export function Repositories () {
         setRepos(repoData)  
     }
 
-
     useEffect(() => {
         if (userName) {
           getRepoData();
@@ -26,7 +25,7 @@ export function Repositories () {
             <List>
                 {repos.map((repo, index) => (
                     <ListItem key={index}>
-                       <a target="_blank"  href={repo.html_url}> {repo.name}</a>
+                       <a target="_blank" href={repo.html_url}> {repo.name}</a>
                     </ListItem>
                 )).slice(0, 20)}
             </List>
