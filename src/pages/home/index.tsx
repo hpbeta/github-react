@@ -1,11 +1,24 @@
+import React from "react";
 import { useState } from "react";
 import { Container, ContainerHeader, ContainerMain, IconSearch, ImageAvatar, StyledIcons, StyledLink } from "./styles"
 import { CiSearch } from "react-icons/ci";
 import { getUser } from "../../services/user";
 
+interface UserProps {
+    avatar_url?: string
+    name?: string
+    bio?: string
+    followers?: number
+    following?: number
+    location?: string
+    login?: string
+
+
+}
+
 export function Home () {
     const [ input, setInput ] = useState('')
-    const [ user, setUser ] = useState({})
+    const [ user, setUser ] = useState<UserProps>({})
 
     async function GetUserData() {
 

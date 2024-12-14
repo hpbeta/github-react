@@ -1,13 +1,20 @@
+import React from "react"
 import { useEffect, useState } from "react"
 import { getRepo } from "../../services/repo"
 import { useParams } from "react-router-dom"
 import { ContainerList, ContainerRepo, LinkBack, List, ListItem } from "./styles"
 
+interface RepoProps {
+  html_url: string
+  name: string
+}
+
 export function Repositories () {
-    const { userName } = useParams() 
-    const [ repos, setRepos] = useState([])
+    const { userName } = useParams<{ userName: string }>() 
+    const [ repos, setRepos] = useState<RepoProps[]>([])
 
  async function getRepoData() {
+  if(!userName) return
         const repoData = await getRepo(userName)
         setRepos(repoData)  
     }
